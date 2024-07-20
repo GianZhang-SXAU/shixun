@@ -1,0 +1,43 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-18 09:05:34
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-18 09:09:32
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 使用 script 标签来编写 JS 代码 -->
+  <script>
+    // 监听当页面加载完毕是 再去执行 JS 代码
+    window.onload = function () {
+      // 弹出框 BOM
+      // alert('Hello JavaScript')
+      // DOM
+      // 创建一个变量用来获取 html 中 div 节点
+      var div1 = document.getElementById('div1')
+      console.log(div1);
+      // 给 div1 变量绑定点击事件
+      div1.onclick = function () {
+        // 修改当前标签的内容
+        div1.innerHTML = '我被点击了'
+        console.log(123);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="div1">点我呀</div>
+  <!-- 引入外部的 JS 文件 -->
+  <script src="./main.js"></script>
+  <!-- 使用 script 标签来编写 JS 代码 -->
+  <script>
+    // 输出语句
+    console.log('Hello JS');
+  </script>
+</body>
+</html>

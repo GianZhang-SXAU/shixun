@@ -1,0 +1,57 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-10 10:11:51
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-10 10:21:19
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul{
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+      margin: 40px auto;
+      position: relative;
+    }
+    ul li{
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* 形变中心点 */
+      transform-origin: center center;
+    }
+    ul li:nth-child(1){
+      background-color: red;
+      transform: rotate(45deg);
+    }
+    ul li:nth-child(2){
+      background-color: blue;
+      transform: rotate(60deg);
+    }
+    ul li:nth-child(3){
+      background-color: green;
+      transform: rotate(75deg);
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-08 18:54:22
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-08 19:45:41
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 父容器的样式 */
+    .father{
+      width: 500px;
+      height: 500px;
+      border: 1px solid;
+      margin: 40px auto;
+      /* 开启 flex 布局 */
+      display: flex;
+      /* 主轴方向 */
+      /* flex-direction: row; */
+      /* 控制子元素是否换行 */
+      /* flex-wrap: wrap; */
+      /* 简写格式 */
+      flex-flow: row nowrap;
+      /* 主轴方向上的对齐方式 */
+      justify-content: center;
+      /* 交叉轴上的对齐方式 */
+      align-items: center;
+    }
+    /* 子元素的样式 */
+    .div1,.div2,.div3{
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      color: white;
+      font-size: 26px;
+    }
+    .div1{
+      background-color: red;
+    }
+    .div2{
+      background-color: blue;
+    }
+    .div3{
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="div1">item1</div>
+    <div class="div2">item2</div>
+    <div class="div3">item3</div>
+    <!-- <div class="div1">item1</div>
+    <div class="div2">item2</div>
+    <div class="div3">item3</div> -->
+  </div>
+</body>
+</html>

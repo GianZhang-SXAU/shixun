@@ -1,0 +1,68 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-09 16:38:01
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-09 16:59:08
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div1{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      /* 需要使用对应的属性来进行动画的声明 */
+      animation-name: leftToRight;
+      /* 持续时间 */
+      animation-duration: 3s;
+      /* 时间曲线 */
+      animation-timing-function: linear;
+      /* 延迟执行 */
+      animation-delay: 0;
+      /* 动画执行的次数 */
+      animation-iteration-count: infinite;
+      /* 指定是否应该轮流反向播放动画。 */
+      animation-direction: alternate;
+      /* 规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。 */
+      animation-fill-mode: forwards;
+      /* 简写形式 */
+      animation: leftToRight 3s linear infinite alternate;
+    }
+    .div1:hover{
+      animation-play-state: paused;
+    }
+    /* 创建一个动画 */
+    @keyframes leftToRight {
+      from{
+        margin-left: 0;
+      }
+      to{
+        margin-left: 400px;
+      }
+      /* 0%{
+        margin-left: 0;
+      }
+      25%{
+        margin-left: 25px;
+      }
+      50%{
+        margin-left: 50px;
+      }
+      75%{
+        margin-left: 75px;
+      }
+      100%{
+        margin-left: 100px;
+      } */
+    }
+  </style>
+</head>
+<body>
+  <div class="div1"></div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-10 08:46:45
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-10 09:13:47
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    /* 背景样式 */
+    .sky{
+      width: 100%;
+      /* 视窗高度 */
+      height: 100vh;
+      background: #63aaec;
+      /* 背景动画 */
+      animation: sky 10s ease-in-out infinite;
+    }
+    /* 背景动画 */
+    @keyframes sky {
+      0%{
+        background: #63aaec;
+      }
+      50%{
+        background: black;
+      }
+      100%{
+        background: #63aaec;
+      }
+    }
+    /* 云样式 */
+    .sky .cloud1{
+      width: 300%;
+      height: 100%;
+      background-image: url('./images/cloud_one.png');
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* 加载动画 */
+      animation: cloud 20s ease-in-out infinite;
+    }
+    .sky .cloud2{
+      width: 300%;
+      height: 100%;
+      background-image: url('./images/cloud_two.png');
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* 加载动画 */
+      animation: cloud 40s ease-in-out infinite;
+    }
+    .sky .cloud3{
+      width: 300%;
+      height: 100%;
+      background-image: url('./images/cloud_three.png');
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* 加载动画 */
+      animation: cloud 60s ease-in-out infinite;
+    }
+    /* 云动画 */
+    @keyframes cloud {
+      from{
+        left: 0;
+      }
+      to{
+        left: -200%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sky">
+    <div class="cloud1"></div>
+    <div class="cloud2"></div>
+    <div class="cloud3"></div>
+  </div>
+</body>
+</html>

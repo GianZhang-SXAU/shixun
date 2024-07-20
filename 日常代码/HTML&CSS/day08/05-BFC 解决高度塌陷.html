@@ -1,0 +1,41 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-04 15:02:49
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-04 15:51:01
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      width: 700px;
+      border: 5px solid red;
+      /* 开启 BFC 解决父元素高度塌陷的问题*/
+      overflow: auto;
+    }
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father">
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <!-- 撑起父元素的高度 -->
+    <!-- <div style="clear: both;"></div> -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-01 15:49:38
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-01 15:58:54
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 在...之后 */
+    p::after {
+      /* 内容 */
+      content: '我是后加的内容';
+    }
+
+    /* 在...之前 */
+    p::before {
+      /* 内容 */
+      content: '我是在前面加入的内容';
+    }
+
+    /* 给首个文字设置样式 */
+    p::first-letter {
+      color: red;
+      font-size: 25px;
+    }
+
+    /* 给第一行设置样式 */
+    p::first-line {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <p>我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是p
+    标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签我是 p 标签</p>
+</body>
+
+</html>

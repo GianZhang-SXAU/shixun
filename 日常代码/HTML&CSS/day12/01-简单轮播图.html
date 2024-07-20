@@ -1,0 +1,73 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-10 08:17:00
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-10 08:43:25
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    div{
+      width: 800px;
+      height: 200px;
+      border: 1px solid;
+      margin: 40px auto;
+      overflow: hidden;
+    }
+    div ul{
+      width: 3000px;
+      height: 200px;
+      /* 加载动画 */
+      animation: swipe 5s linear infinite;
+    }
+    ul li{
+      width: 400px;
+      height: 200px;
+      float: left;
+    }
+    li img{
+      width: 400px;
+    }
+    ul:hover{
+      animation-play-state: paused;
+    }
+    ul:hover li{
+      opacity: 0.5;
+    }
+    ul li:hover{
+      opacity: 1;
+    }
+    /* 声明动画 */
+    @keyframes swipe {
+      from{
+        margin-left: 0;
+      }
+      to{
+        margin-left: -1600px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li><img src="./images/ad7.jpeg" alt=""></li>
+      <li><img src="./images/ad8.jpg" alt=""></li>
+      <li><img src="./images/ad9.jpeg" alt=""></li>
+      <li><img src="./images/ad10.jpg" alt=""></li>
+      <li><img src="./images/ad7.jpeg" alt=""></li>
+      <li><img src="./images/ad8.jpg" alt=""></li>
+    </ul>
+  </div>
+</body>
+</html>

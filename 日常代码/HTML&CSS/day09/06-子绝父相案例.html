@@ -1,0 +1,51 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-05 09:41:51
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-05 09:51:38
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img{
+      border: 2px solid black;
+    }
+    /* 轮播图区域的样式 */
+    .swiper{
+      width: 1024px;
+      height: 683px;
+      margin: 0 auto;
+      position: relative;
+    }
+    /* 左箭头的样式 */
+    .swiper img:nth-child(2){
+      position: absolute;
+      top: 50%;
+      margin-top: -32px;
+      left: 20px;
+    }
+    /* 右箭头的样式 */
+    .swiper img:nth-child(3){
+      position: absolute;
+      top: 50%;
+      margin-top: -32px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="swiper">
+    <!-- 图片 -->
+    <img src="./images/sxnd.jpg" alt="">
+    <!-- 左箭头 -->
+    <img src="./images/left.png" alt="">
+    <!-- 右箭头 -->
+    <img src="./images/right.png" alt="">
+  </div>
+</body>
+</html>

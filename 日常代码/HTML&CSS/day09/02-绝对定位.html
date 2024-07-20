@@ -1,0 +1,58 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-05 08:14:21
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-05 09:02:55
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div1 {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    .div2 {
+      width: 300px;
+      height: 300px;
+      border: 1px solid;
+      /* 相对定位 */
+      position: relative;
+    }
+    .div2 .son {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      /* 绝对定位 */
+      position: absolute;
+      /* 水平方向居中 */
+      left: 50%;
+      margin-left: -50px;
+      /* 垂直方向居中 */
+      top: 50%;
+      margin-top: -50px;
+    }
+    .div3 {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div1"></div>
+  <div class="div2">
+    <div class="son"></div>
+  </div>
+  <div class="div3"></div>
+</body>
+
+</html>

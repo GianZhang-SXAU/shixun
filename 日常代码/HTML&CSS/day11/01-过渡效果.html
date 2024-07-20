@@ -1,0 +1,50 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-09 14:57:31
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-09 15:16:43
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div1{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      /* 要告诉 CSS 哪些属性需要发生过渡效果 */
+      transition-property: width, height, background-color;
+      /* 过渡效果的持续时长 */
+      transition-duration: 3s;
+      /* 设置时间曲线函数 */
+      transition-timing-function: ease;
+      /* 延时操作 */
+      transition-delay: 0;
+    }
+    /* 当鼠标移入到特定区域内是 对样式进行的更改 */
+    .div1:hover{
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+    .div2{
+      border: 1px solid;
+      text-align: center;
+      font-size: 20px;
+      /* 简写过渡 */
+      transition: font-size 2s;
+    }
+    .div2:hover{
+      font-size: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1"></div>
+  <div class="div2">山西农业大学</div>
+</body>
+</html>

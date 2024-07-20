@@ -1,0 +1,66 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-09 15:32:41
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-09 15:40:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul{
+      width: 500px;
+      height: 500px;
+      border: 1px solid;
+      margin: 40px auto;
+    }
+    ul li{
+      width: 80px;
+      height: 80px;
+      background-color: red;
+      font-size: 24px;
+      text-align: center;
+      margin-top: 20px;
+      color: white;
+      /* 过渡效果 */
+      transition: margin-left 3s;
+    }
+    ul:hover li{
+      margin-left: 500px;
+    }
+    ul li:nth-child(1){
+      transition-timing-function: linear;
+    }
+    ul li:nth-child(2){
+      transition-timing-function: ease;
+    }
+    ul li:nth-child(3){
+      transition-timing-function: ease-in;
+    }
+    ul li:nth-child(4){
+      transition-timing-function: ease-out;
+    }
+    ul li:nth-child(5){
+      transition-timing-function: ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>linear</li>
+    <li>ease</li>
+    <li>ease-in</li>
+    <li>ease-out</li>
+    <li>ease-in-out</li>
+  </ul>
+</body>
+</html>

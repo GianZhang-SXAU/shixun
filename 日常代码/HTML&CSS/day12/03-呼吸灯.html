@@ -1,0 +1,77 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-10 09:18:05
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-10 09:32:38
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 容器样式 */
+    .content{
+      width: 500px;
+      height: 500px;
+      background-color: gainsboro;
+      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* 大圆的样式 */
+    .content .bigCircle{
+      width: 330px;
+      height: 330px;
+      border: 20px solid;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* 加载动画 */
+      animation: breath 3s linear infinite alternate;
+    }
+    /* 小圆的样式 */
+    .bigCircle .smallCircle{
+      width: 280px;
+      height: 280px;
+      border: 10px solid;
+      border-radius: 50%;
+      animation: breath 3s linear infinite alternate;
+    }
+    /* 声明动画 */
+    @keyframes breath {
+      0%{
+        transform: scale(0.6);
+        border-color: orange;
+      }
+      25%{
+        transform: scale(0.7);
+        border-color: red;
+      }
+      50%{
+        transform: scale(0.8);
+        border-color: blueviolet;
+      }
+      75%{
+        transform: scale(0.9);
+        border-color: green;
+      }
+      100%{
+        transform: scale(1);
+        border-color: orange;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="bigCircle">
+      <div class="smallCircle"></div>
+    </div>
+  </div>
+</body>
+</html>

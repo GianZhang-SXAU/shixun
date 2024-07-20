@@ -1,0 +1,55 @@
+<!--
+ * @Description: 
+ * @Author: ZachGmy
+ * @Date: 2024-07-10 09:39:54
+ * @LastEditors: ZachGmy
+ * @LastEditTime: 2024-07-10 09:50:03
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul{
+      width: 500px;
+      height: 500px;
+      border: 1px solid;
+      margin: 40px auto;
+    }
+    ul li{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      color: white;
+      margin: 60px auto;
+    }
+    ul li:nth-child(1){
+      /* 旋转 */
+      /* px em deg rem */
+      transform: rotate(180deg);
+    }
+    ul li:nth-child(2){
+      /* 平移 */
+      transform: translate(100px,100px);
+    }
+    ul li:nth-child(3){
+      /* 形变 */
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>旋转</li>
+    <li>平移</li>
+    <li>形变</li>
+  </ul>
+</body>
+</html>
