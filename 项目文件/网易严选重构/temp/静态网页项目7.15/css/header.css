@@ -1,0 +1,91 @@
+/* 头部父容器设置高度和背景色 */
+.header{
+    height: 36px;
+    background-color: #333333;
+}
+.nav{
+    /* background-color: #333333; */
+    width: 100%;
+}
+/* 设置居中容器 */
+.header>.box{
+    width: 1090px;
+    height: 36px;
+    /* 设置容器水平居中 */
+    margin: 0 auto;
+}
+/* 设置ul右浮动 */
+.header>.box>.nav>ul{
+    float: right;
+}
+/* 给ul的父元素清除浮动 */
+.header>.box>.nav::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.header>.box>.nav>ul>li{
+    float: left;
+    margin-right: 10px;
+    /* 设置文字垂直居中 */
+    line-height: 36px;
+}
+/* 设置a标签的样式 */
+.header>.box>.nav>ul>li>a{
+    text-decoration: none;
+    color: #ccc;
+    font-size: 12px;
+    /* 给a标签中间添加边框将他们分开 */
+    border-right: 1px solid #5c5c5c;
+    padding-right: 10px;
+}
+.header>.box>.nav>ul>li>a:hover{
+    color: #fff;
+}
+
+.header>.box>.nav>ul>li:nth-child(4):hover>ul{
+    display: block;
+}
+.header>.box>.nav>ul>li:nth-child(4)>ul>li>a{
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+.header>.box>.nav>ul>li:nth-child(4)>ul>li>a:hover{
+    color: orange;
+}
+.header>.box>.nav>ul>li:nth-child(4)>ul>.arrow{
+    box-sizing: border-box;
+    width: 10px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    position: absolute;
+    left: 45px;
+    top: -10px;
+}
+
+
+.header>.box>.nav>ul>li:nth-child(5):hover>ul{
+    display: block;
+}
+.header>.box>.nav>ul>li:nth-child(5)>ul>li>a{
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+.header>.box>.nav>ul>li:nth-child(5)>ul>li>a:hover{
+    color: orange;
+}
+.header>.box>.nav>ul>li:nth-child(5)>ul>.arrow{
+    box-sizing: border-box;
+    width: 10px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    position: absolute;
+    left: 45px;
+    top: -10px;
+}
