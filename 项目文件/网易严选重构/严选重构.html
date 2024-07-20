@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>网易严选重构</title>
   <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4621073_94ml83a8iqp.css">
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="iconfont.css">
   <style>
     /* 清除原生样式 */
     * {
@@ -14,6 +15,7 @@
       padding: 0;
       list-style: none;
     }
+
 
     /* 根节点样式 */
     body {
@@ -996,78 +998,162 @@
       margin-top: 10px;
     }
 
+    /* 甄选家区域 */
+    .content .zhenxuanjia {
+      width: 1090px;
+      height: 428px;
+      margin: 0 auto;
+    }
+
+    /* 左边区域 */
+    .zhenxuanjia .imgLeft {
+      width: 690px;
+      height: 380px;
+      background-image: url(https://yanxuan.nosdn.127.net/b21b20f34d5007f961c182273a5d429f.jpg?type=webp&amp;imageView&amp;quality=95&amp;thumbnail=690y380);
+      background-size: 690px 380px;
+      margin-top: 10px;
+      float: left;
+    }
+
+    /* 右边区域 */
+    .zhenxuanjia .imgRight {
+      width: 390px;
+      height: 185px;
+      float: right;
+    }
+
+    .imgRight div {
+      margin-top: 10px;
+      width: 100%;
+      height: 185px;
+      margin-bottom: 10px;
+    }
+
+    .zhenxuanjia .imgRight .imgTop {
+      background-image: url(https://yanxuan.nosdn.127.net/9548e1f1a0ba0436cb13d586c50284be.jpg?type=webp&amp;imageView&amp;quality=95&amp;thumbnail=390y185);
+      background-size: 390px 185px;
+    }
+
+    .zhenxuanjia .imgRight .imgBottom {
+      background-image: url(https://yanxuan.nosdn.127.net/4a56bf536141eb2ad84f8f8f0e0418ab.jpg?type=webp&amp;imageView&amp;quality=95&amp;thumbnail=390y185);
+      background-size: 390px 185px;
+    }
+
+    .content .bottom {
+      width: 100%;
+      height: 660px;
+      background-color: #f4f0ea;
+    }
+
+    .content .bottom>.title {
+      width: 1090px;
+      height: 48.33px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 5px;
+      font-family: 微软雅黑;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    /* 第一个标题 */
+    .content .bottom .title .T1 {
+      width: 13%;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    /* 第二个标题 */
+    .content .bottom .title .T2 {
+      width: 15%;
+      font-size: 14px;
+      font-weight: lighter;
+      /* color: #999999; */
+      margin-left: 5px;
+    }
+
+    /* 底部 */
     /* footer */
-footer {
-  width: 1519.2px;
-  height: 340px;
-  background-color: #414141;
-  overflow: hidden;
-}
-footer .sign {
-  width: 1090px;
-  height: 51px;
-  margin: auto;
-  display: flex;
-  padding: 45px 0;
-  border-bottom: 1px solid #fff;
-  text-align: center;
-}
-footer .sign li {
-  flex: 1;
-  line-height: 50px;
-}
-footer .sign li i {
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  border-radius: 22px;
-  border: 2px solid #fff;
-  font-size: 40px;
-  color: #fff;
-  vertical-align: middle;
-  margin-right: 10px;
-}
-footer .sign li span {
-  font-size: 21px;
-  vertical-align: middle;
-  color: #fff;
-}
-footer .copyright {
-  width: 1090px;
-  height: 166.8px;
-  margin: auto;
-  margin-top: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-footer .copyright li {
-  text-align: center;
-  font-size: 12px;
-}
-footer .copyright li a {
-  color: #999999;
-}
-footer .copyright li:first-child a {
-  display: inline-block;
-  border-left: 2px solid #999999;
-  padding: 0 15px;
-}
-footer .copyright li:first-child a:first-child {
-  border: 0;
-}
-footer .copyright li:nth-child(2) a {
-  margin-left: 5px;
-}
-footer .copyright li:nth-child(n + 3) a {
-  padding: 0 10px;
-}
-footer .copyright li a:hover {
-  color: #fff;
-}
+    footer {
+      width: 1519.2px;
+      height: 340px;
+      background-color: #414141;
+      overflow: hidden;
+    }
 
+    footer .sign {
+      width: 1090px;
+      height: 51px;
+      margin: auto;
+      display: flex;
+      padding: 45px 0;
+      border-bottom: 1px solid #fff;
+      text-align: center;
+    }
 
+    footer .sign li {
+      flex: 1;
+      line-height: 50px;
+    }
 
+    footer .sign li i {
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      border-radius: 22px;
+      border: 2px solid #fff;
+      font-size: 40px;
+      color: #fff;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    footer .sign li span {
+      font-size: 21px;
+      vertical-align: middle;
+      color: #fff;
+    }
+
+    footer .copyright {
+      width: 1090px;
+      height: 166.8px;
+      margin: auto;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    footer .copyright li {
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer .copyright li a {
+      color: #999999;
+    }
+
+    footer .copyright li:first-child a {
+      display: inline-block;
+      border-left: 2px solid #999999;
+      padding: 0 15px;
+    }
+
+    footer .copyright li:first-child a:first-child {
+      border: 0;
+    }
+
+    footer .copyright li:nth-child(2) a {
+      margin-left: 5px;
+    }
+
+    footer .copyright li:nth-child(n + 3) a {
+      padding: 0 10px;
+    }
+
+    footer .copyright li a:hover {
+      color: #fff;
+    }
   </style>
 </head>
 
@@ -1505,70 +1591,88 @@ footer .copyright li a:hover {
           </div>
         </div>
       </div>
+      <!-- 甄选家 -->
+      <div class="zhenxuanjia">
+        <div class="title"></div>
+        <div class="img">
+          <!-- 左边区域 -->
+          <div class="imgLeft"></div>
+          <!-- 右边区域 -->
+          <div class="imgRight">
+            <div class="imgTop"></div>
+            <div class="imgBottom"></div>
+          </div>
+        </div>
+      </div>
+      <!-- 大家都在说 -->
+      <div class="bottom">
+        <div class="title">
+          <div class="T1">大家都在说</div>
+          <div class="T2">生活,,没有统一标准</div>
+        </div>
+      </div>
     </div>
-  </div>
-    <!-- footer -->
-  <!-- <footer>
-    <ul class="sign">
-      <li>
-        <i class="iconfont">&#xe63d;</i>
-        <span>网易自营电商</span>
-      </li>
-      <li>
-        <i class="iconfont">&#xe6d0;</i>
-        <span>30天无忧退换货</span>
-      </li>
-      <li>
-        <i class="iconfont">&#xe606;</i>
-        <span>满99元免邮费</span>
-      </li>
-      <li>
-        <i class="iconfont">&#xe63c;</i>
-        <span>品质保障</span>
-      </li>
-    </ul>
-    <ul class="copyright">
-      <li>
-        <a href="#">关于我们</a>
-        <a href="#">帮助中心</a>
-        <a href="#">售后服务</a>
-        <a href="#">配送与验收</a>
-        <a href="#">商务合作</a>
-        <a href="#">企业采购</a>
-        <a href="#">开放平台</a>
-        <a href="#">搜索推荐</a>
-        <a href="#">友情链接</a>
-        <a href="#">廉政举报</a>
-      </li>
-      <li>
-        <a href="#">食品经营许可证：JY13301080111719</a>
-        <a href="#">出版物经营许可证：新出发滨字第0132号</a>
-        <a href="#">妙得ICP证号：ICP 证浙B2-20160106</a>
-        <a href="#">浙杭食药监械经营备20171029号</a>
-        <a href="#">营业执照</a>
-        <a href="#">网易公司版权所有 © 1997-2022</a>
-      </li>
-      <li>
-        <a href="#">无线电发射设备销售备案：42202011096855</a>
-        <a href="#">互联网药品信息服务资格证：（浙）-经营性-2022-0075</a>
-        <a href="#">医疗器械网络交易第三方平台备案：（浙）网械平台备字[2020]第00029号</a>
-      </li>
-      <li>
-        <a href="#">（浙杭）网械企备字[2019]第00119号</a>
-        <a href="#">（粤）网械平台备字（2019）第00004号</a>
-        <a href="#">（粤）-非经营性-2016-0023</a>
-        <a href="#">进口冷链食品管理承诺书</a>
-      </li>
-      <li>
-        <a href="#">食品经营许可证：JY14207050007694</a>
-        <a href="#">浙江省网络食品销售第三方平台提供者备案：浙网食A33010009</a>
-        <a href="#">单用途商业预付卡备案证：330100AAC0024</a>
-      </li>
-      <li><a href="#">出版物网络交易平台服务经营备案：新出发浙备字第2021006号</a></li>
-    </ul>
-  </footer> -->
+    <!-- 底部 -->
+    <footer>
+      <ul class="sign">
+        <li>
+          <i class="iconfont">&#xe63d;</i>
+          <span>网易自营电商</span>
+        </li>
+        <li>
+          <i class="iconfont">&#xe6d0;</i>
+          <span>30天无忧退换货</span>
+        </li>
+        <li>
+          <i class="iconfont">&#xe606;</i>
+          <span>满99元免邮费</span>
+        </li>
+        <li>
+          <i class="iconfont">&#xe63c;</i>
+          <span>品质保障</span>
+        </li>
+      </ul>
+      <u class="copyright">
+        <li>
+          关于我们
+          帮助中心
+          售后服务
+          配送与验收
+          商务合作
+          企业采购
+          开放平台
+          搜索推荐
+          友情链接
+          廉政举报
+        </li>
+        <li>
+          食品经营许可证:JY13301080111719
+          出版物经营许可证:新出发滨字第0132号
+          妙得ICP证号:ICP 证浙B2-20160106
+          浙杭食药监械经营备20171029号
+          营业执照
+          网易公司版权所有 © 1997-2022
+        </li>
+        <li>
+          无线电发射设备销售备案:42202011096855
+          互联网药品信息服务资格证：（浙）-经营性-2022-0075
+          医疗器械网络交易第三方平台备案：（浙）网械平台备字[2020]第00029号
+        </li>
+        <li>
+          （浙杭）网械企备字[2019]第00119号
+          (粤)网械平台备字(2019)第00004号
+          （粤）-非经营性-2016-0023
+          进口冷链食品管理承诺书
+        </li>
+        <li>
+          食品经营许可证:JY14207050007694
+          浙江省网络食品销售第三方平台提供者备案:浙网食A33010009
+          单用途商业预付卡备案证:330100AAC0024
+        </li>
+        <li>出版物网络交易平台服务经营备案:新出发浙备字第2021006号</li>
+    </footer>
 
- 
+  </div>
 </body>
 
 </html>
