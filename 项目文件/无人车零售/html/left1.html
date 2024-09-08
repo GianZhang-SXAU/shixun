@@ -1,0 +1,34 @@
+<!-- 图表上部分left1 当前在售车辆 -->
+<div>
+  <div class="cb_title">
+    <!-- 图标 -->
+    <div class="icon"></div>
+    <!-- 文字 -->
+    <div class="text">当前在售车辆</div>
+  </div>
+  <div id="left1_bar" class="plot_box"></div>
+</div>
+
+<!-- 获取数据绘制图表 -->
+<script>
+  const left1Data = [
+    { city: '太原市', value: 38 },
+    { city: '晋中市', value: 52 },
+    { city: '阳泉市', value: 61 },
+    { city: '吕梁市', value: 32 },
+    { city: '大同市', value: 48 },
+  ];
+
+  // const bar = new Bar('left1_bar', {
+  //   data,
+  //   xField: 'value',
+  //   yField: 'city',
+  //   seriesField: 'city',
+  //   legend: {
+  //     position: 'top-left',
+  //   },
+  // });
+  var bar = getLeftBar_1("left1_bar", left1Data)
+
+  bar.render();
+</script>

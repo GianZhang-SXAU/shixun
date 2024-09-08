@@ -1,0 +1,95 @@
+<!-- 图表下部分bottom2  top10商品利润-->
+<div>
+  <div class="cb_title">
+    <!-- 图标 -->
+    <div class="icon"></div>
+    <!-- 文字 -->
+    <div class="text">top10商品利润</div>
+  </div>
+  <div id="bottom2_bullet" class="plot_box"></div>
+</div>
+
+<!-- 获取数据绘制图表 -->
+<script>
+
+  const bottom2Data = [
+    {
+      title: '火烧',
+      ranges: [30, 60, 100],
+      measures: [29],
+      target: 35,
+    },
+    {
+      title: '羊肉汤',
+      ranges: [30, 60, 100],
+      measures: [38],
+      target: 42,
+    },
+    {
+      title: '刀削面',
+      ranges: [30, 60, 100],
+      measures: [41],
+      target: 40,
+    }
+  ];
+
+  const bulletPlot = new Bullet('bottom2_bullet', {
+    data:bottom2Data,
+    measureField: 'measures',
+    rangeField: 'ranges',
+    targetField: 'target',
+    xField: 'title',
+    color: {
+      range: ['#FFbcb8', '#FFe0b0', '#bfeec8'],
+      measure: '#5B8FF9',
+      target: '#39a3f4',
+    },
+    label: {
+      measure: {
+        position: 'middle',
+        style: {
+          fill: '#fff',
+        },
+      },
+    },
+    xAxis: {
+      line: null,
+    },
+    yAxis: false,
+    // 自定义 legend
+    legend: {
+      custom: true,
+      position: 'bottom',
+      items: [
+        {
+          value: '低',
+          name: '低',
+          marker: { symbol: 'square', style: { fill: '#FFbcb8', r: 5 } },
+        },
+        {
+          value: '良',
+          name: '良',
+          marker: { symbol: 'square', style: { fill: '#FFe0b0', r: 5 } },
+        },
+        {
+          value: '优',
+          name: '优',
+          marker: { symbol: 'square', style: { fill: '#bfeec8', r: 5 } },
+        },
+        {
+          value: '实际利润',
+          name: '实际利润',
+          marker: { symbol: 'square', style: { fill: '#5B8FF9', r: 5 } },
+        },
+        {
+          value: '目标利润',
+          name: '目标利润',
+          marker: { symbol: 'line', style: { stroke: '#39a3f4', r: 5 } },
+        },
+      ],
+    },
+  });
+
+  bulletPlot.render();
+
+</script>

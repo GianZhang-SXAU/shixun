@@ -1,0 +1,37 @@
+<!-- 图表上部分left2 商品销售占比图 -->
+<div>
+  <div class="cb_title">
+    <!-- 图标 -->
+    <div class="icon"></div>
+    <!-- 文字 -->
+    <div class="text">商品销售占比图</div>
+  </div>
+  <div id="left2_pie" class="plot_box"></div>
+</div>
+
+<!-- 获取数据绘制图表 -->
+<script>
+  const left2Data = [
+    { city: '太原市', value: 28 },
+    { city: '晋中市', value: 18 },
+    { city: '阳泉市', value: 15 },
+    { city: '吕梁市', value: 22 },
+    { city: '大同市', value: 17 },
+  ];
+
+  const piePlot = new Pie('left2_pie', {
+    appendPadding: 10,
+    data:left2Data,
+    angleField: 'value',
+    colorField: 'city',
+    radius: 0.8,
+    label: {
+      type: 'outer',
+      content: '{name} {percentage}',
+    },
+    interactions: [{ type: 'pie-legend-active' }, { type: 'element-active' }],
+  });
+
+  piePlot.render();
+
+</script>

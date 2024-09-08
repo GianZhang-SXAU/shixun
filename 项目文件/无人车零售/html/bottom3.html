@@ -1,0 +1,85 @@
+<!-- 图表下部分bottom3 地区销量趋势分析 -->
+<div>
+  <div class="cb_title">
+    <!-- 图标 -->
+    <div class="icon"></div>
+    <!-- 文字 -->
+    <div class="text">地区销量趋势分析</div>
+  </div>
+  <div id="bottom3_line" class="plot_box"></div>
+</div>
+
+<!-- 获取数据绘制图表 -->
+<script>
+  const bottom3Data = [
+    {
+      "name": "太原",
+      "time": "2023-11-01",
+      "gdp": 510035.5
+    },
+    {
+      "name": "太原",
+      "time": "2023-11-02",
+      "gdp": 45765.2
+    },
+    {
+      "name": "太原",
+      "time": "2023-11-03",
+      "gdp": 510035.5
+    },
+    {
+      "name": "晋中",
+      "time": "2023-11-01",
+      "gdp": 334035.7
+    },
+    {
+      "name": "晋中",
+      "time": "2023-11-02",
+      "gdp": 343135.2
+    },
+    {
+      "name": "晋中",
+      "time": "2023-11-03",
+      "gdp": 339645.7
+    },
+    {
+      "name": "阳泉",
+      "time": "2023-11-01",
+      "gdp": 123035.7
+    },
+    {
+      "name": "阳泉",
+      "time": "2023-11-02",
+      "gdp": 210035.7
+    },
+    {
+      "name": "阳泉",
+      "time": "2023-11-03",
+      "gdp": 345635.7
+    },
+  ]
+  const linePlot = new Line('bottom3_line', {
+    data: bottom3Data,
+    xField: 'time',
+    yField: 'gdp',
+    seriesField: 'name',
+    yAxis: {
+      label: {
+        formatter: (v) => `${(v / 10e8).toFixed(1)} B`,
+      },
+    },
+    legend: {
+      position: 'top',
+    },
+    smooth: true,
+    // @TODO 后续会换一种动画方式
+    animation: {
+      appear: {
+        animation: 'path-in',
+        duration: 5000,
+      },
+    },
+  });
+
+  linePlot.render();
+</script>
