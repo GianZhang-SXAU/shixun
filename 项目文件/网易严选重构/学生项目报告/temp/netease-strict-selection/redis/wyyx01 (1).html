@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入 iconfont 字体图标 -->
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4621073_94ml83a8iqp.css">
+  <style>
+    /* 清除原生自带的样式 */
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    /* 根节点的样式 */
+    body{
+      width: 100%;
+    }
+    /* 主容器的样式 */
+    .wyContainer{
+      height: 2000px;
+      /* 最小宽度 */
+      min-width: 1150px;
+      /* background-color: antiquewhite; */
+    }
+    /* 顶部区域的样式 */
+    .header{
+      width: 100%;
+      height: 176px;
+    }
+    /* 顶部导航栏区域的样式 */
+    .header .headerNav{
+      width: 100%;
+      height: 36px;
+      background-color: #333333;
+    }
+    /* 顶部导航栏的样式 */
+    .headerNav .nav{
+      width: 1090px;
+      height: 36px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      background-color: #333333;
+    }
+    /* 每一个导航子选项的样式 */
+    .nav>div{
+      line-height: 36px;
+      cursor: pointer;
+      font-size: 12px;
+      color: #CCCCCC;
+    }
+    /* 第四个 div 设置样式 */
+    .nav>div:nth-child(4){
+      color: #CC9756;
+      position: relative;
+    }
+    /* 企业采购下拉列表的样式 */
+    .nav>div:nth-child(4) .selectMenu{
+      width: 83px;
+      height: 100px;
+      background-color: white;
+      position: absolute;
+      left: 10px;
+      display: none;
+      /* 盒子阴影 */
+      box-shadow: 0px 0px 2px 2px gray;
+    }
+    /* 鼠标移入企业采购时 弹出下拉列表 */
+    .nav>div:nth-child(4):hover .selectMenu{
+      display: block;
+    }
+    /* 列表项的样式 */
+    .selectMenu>div{
+      width: 70%;
+      line-height: 33px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 14px;
+      color: #999999;
+    }
+    .selectMenu>div:nth-child(n+3){
+      border-top: 1px solid gainsboro;
+    }
+    /* 鼠标移入时改变蚊子的颜色 */
+    .nav>div:hover{
+      color: white;
+    }
+    /* 每一个导航子选项前的边框样式 */
+    .nav>div:nth-child(n+2)::before{
+      content: '';
+      display: inline-block;
+      height: 16px;
+      border-left: 1px solid #5C5C5C;
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+    /* :has()里面是选择子级的选择器，通过这个子级的选择器来选择前面的选择器的父级 */
+    .nav>div:nth-child(4):has(.selectMenu:hover){
+      color: orange;
+    }
+    /* 字体图标的样式 */
+    .icon-xiangxiajiantou{
+      font-size: 8px;
+    }
+    .icon-shouji-copy{
+      font-size: 10px;
+      color: white;
+    }
+    .icon-xiangxiasanjiao{
+      color: white;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -8px;
+    }
+    /* 搜索区域的样式 */
+    .searchArea{
+      width: 1090px;
+      height: 110px;
+      margin: 0 auto;
+      display: flex;
+    }
+    /* logo 区域的样式 */
+    .searchArea .logo{
+      width: 20%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    /* logo 的样式 */
+    .logo img{
+      width: 100%;
+    }
+    /* 搜索框的样式 */
+    .searchArea .sInput{
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sInput .input{
+      width: 530px;
+      height: 38px;
+      display: flex;
+    }
+    /* 左侧输入框的样式 */
+    .input input{
+      width: 80%;
+      height: 38px;
+      box-sizing: border-box;
+      border: 1px solid #CC9756;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      outline: none;
+      /* 背景图片属性设置 icon */
+      background-image: url('./static/search.png');
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      background-position: left 10px center;
+      padding-left: 38px;
+    }
+    /* 右侧按钮的样式 */
+    .input div{
+      width: 20%;
+      height: 38px;
+      background-color: #CC9756;
+      color: white;
+      font-size: 18px;
+      line-height: 38px;
+      text-align: center;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .input div:hover{
+      opacity: 0.7;
+    }
+    /* 购物车的样式 */
+    .searchArea .shopCar{
+      width: 20%;
+      height: 100%;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <!-- 主容器 -->
+  <div class="wyContainer">
+    <!-- 头部区域 -->
+    <div class="header">
+      <!-- 顶部导航栏区域 -->
+      <div class="headerNav">
+        <!-- 导航栏 -->
+        <div class="nav">
+          <!-- 如果有跳转页面的需求 可以替换成 a 标签 -->
+          <div>登录/注册</div>
+          <div>我的订单</div>
+          <div>甄选家</div>
+          <div>
+            企业采购
+            <i class="iconfont icon-xiangxiajiantou"></i>
+            <!-- 下拉列表 -->
+            <div class="selectMenu">
+              <i class="iconfont icon-xiangxiasanjiao"></i>
+              <!-- 列表项 -->
+              <div>严选智采</div>
+              <div>企业购</div>
+              <div>联系我们</div>
+            </div>
+          </div>
+          <div>
+            客户服务
+            <i class="iconfont icon-xiangxiajiantou"></i>
+          </div>
+          <div>
+            <i class="iconfont icon-shouji-copy"></i>
+            APP
+          </div>
+        </div>
+      </div>
+      <!-- 搜索区域 -->
+      <div class="searchArea">
+        <!-- logo 区域 -->
+        <div class="logo">
+          <img src="./static/yxLogo.png" alt="">
+        </div>
+        <!-- 搜索框 -->
+        <div class="sInput">
+          <div class="input">
+            <!-- 输入框 -->
+            <input type="text" placeholder="请输入内容">
+            <!-- 搜索按钮 -->
+            <div>搜索</div>
+          </div>
+        </div>
+        <!-- 购物车 -->
+        <div class="shopCar"></div>
+      </div>
+      <!-- 横向导航菜单 -->
+      <div class="menu"></div>
+    </div>
+    <!-- 内容展示区 -->
+    <div class="content"></div>
+    <!-- 底部区域 -->
+    <div class="footer"></div>
+  </div>
+</body>
+</html>
