@@ -96,8 +96,9 @@
 /* left1图表 */
 .left1_content {
     width: 100%;
-    height: 160px;
+    height: 10px;
 }
+
 
 /* 图表下部分 */
 .charts_bottom {
@@ -109,4 +110,10 @@
 .bottom3,
 .bottom4 {
     flex: 2;
+}
+
+
+.plot_box{
+    height: 150px;
+
 }

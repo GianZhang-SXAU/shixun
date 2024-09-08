@@ -1,3 +1,11 @@
+<!--
+ * @Author: GianZhang-SXAU zhangjianan545@gmail.com
+ * @Date: 2024-09-06 09:27:14
+ * @LastEditors: GianZhang-SXAU zhangjianan545@gmail.com
+ * @LastEditTime: 2024-09-08 16:33:35
+ * @FilePath: \无人车零售\html\right1.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <!-- 图表上部分right1  top10商品销售趋势-->
 <div>
   <div class="cb_title">
@@ -6,8 +14,35 @@
     <!-- 文字 -->
     <div class="text">top10商品销售趋势</div>
   </div>
-  <div class="plot_box"></div>
+  <div id="top10_salesTrend" class="plot_box"></div>
 </div>
 
 <!-- 获取数据绘制图表 -->
-<script></script>
+<script>
+const salesTrendData = [
+  { date: '2023-01-01', product: '冰红茶', sales: 10 },
+  { date: '2023-01-01', product: '雪碧', sales: 20 },
+  { date: '2023-01-01', product: '可乐', sales: 20 },
+  { date: '2023-01-02', product: '冰红茶', sales: 35 },
+  { date: '2023-01-02', product: '雪碧', sales: 45 },
+  { date: '2023-01-02', product: '可乐', sales: 30 },
+  // 更多数据...
+];
+
+const salesTrendPlot = new G2Plot.Line('top10_salesTrend', {
+    data: salesTrendData,
+    xField: 'date',
+    yField: 'sales',
+    seriesField: 'product',
+    color: ['#5B8FF9', '#5AD8A6','#5D7092'],
+    xAxis: {
+      title: { text: '日期' },
+    },
+    yAxis: {
+      title: { text: '销售量' },
+    },
+    smooth: true,
+  });
+  salesTrendPlot.render();
+
+</script>

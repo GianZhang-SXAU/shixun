@@ -6,8 +6,34 @@
     <!-- 文字 -->
     <div class="text">地区销售占比</div>
   </div>
-  <div class="plot_box"></div>
+  <div id="salesRegionChart" class="plot_box"></div>
 </div>
 
 <!-- 获取数据绘制图表 -->
-<script></script>
+<script>
+const salesRegionData = [
+  { region: '太原市', sales: 17 },
+  { region: '晋中市', sales: 28 },
+  { region: '阳泉市', sales: 15 },
+  { region: '大同市', sales: 18 },
+  { region: '忻州市', sales: 22 },
+];
+
+const salesRegionPlot = new G2Plot.Pie('salesRegionChart', {
+    data: salesRegionData,
+    angleField: 'sales',
+    colorField: 'region',
+    radius: 1,
+    label: {
+      type: 'inner',
+      offset: '-30%',
+      content: '{percentage}',
+      style: { fill: '#fff' },
+    },
+    interactions: [{ type: 'element-selected' }, { type: 'element-active' }],
+  });
+  salesRegionPlot.render();
+
+
+
+</script>

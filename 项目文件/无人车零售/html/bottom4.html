@@ -1,3 +1,11 @@
+<!--
+ * @Author: GianZhang-SXAU zhangjianan545@gmail.com
+ * @Date: 2024-09-06 09:28:20
+ * @LastEditors: GianZhang-SXAU zhangjianan545@gmail.com
+ * @LastEditTime: 2024-09-08 16:36:49
+ * @FilePath: \无人车零售\html\bottom4.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <!-- 图表下部分bottom4 销售下滑商品-->
 <div>
   <div class="cb_title">
@@ -6,8 +14,33 @@
     <!-- 文字 -->
     <div class="text">销售下滑商品</div>
   </div>
-  <div class="plot_box"></div>
+  <div id="decliningProductsChart" class="plot_box"></div>
 </div>
 
 <!-- 获取数据绘制图表 -->
-<script></script>
+<script>
+    const decliningProductsData = [
+      { product: '可乐', sales: 15 },
+      { product: '雪碧', sales: 12 },
+      { product: '冰红茶', sales: 8 },
+    ];
+
+  const decliningProductsPlot = new G2Plot.Bar('decliningProductsChart', {
+    data: decliningProductsData,
+    xField: 'sales',
+    yField: 'product',
+    color: ['#FF4D4F'],
+    label: {
+      position: 'middle',
+      style: {
+        fill: '#FFFFFF',
+        opacity: 0.6,
+      },
+    },
+    xAxis: { title: { text: '销售量' } },
+    yAxis: { title: { text: '商品' } },
+  });
+  decliningProductsPlot.render();
+
+
+</script>
